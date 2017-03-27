@@ -47,18 +47,29 @@ break;
 }
 case "spotify-this-song": 
 {
-    
+
 spotify.search({ type: 'track', query: command2 }, function(err, data) {
     if ( err ) {
         console.log('Error occurred: ' + err);
         return;
     }
-    console.log(JSON.stringify(data));
-    // Do something with 'data' 
-        fs.appendFile('spotify_json.json', JSON.stringify(data), (err) => {
-        if (err) throw err;
-        console.log('The "data to append" was appended to file!');
-    });
+    // console.log(JSON.stringify(data));
+    var randomNum = Math.floor(Math.random() * data.tracks.items.length);
+
+    var artist = JSON.stringify((data).tracks.items[randomNum].album.artists[0].name);
+    var song = JSON.stringify((data).tracks.items[randomNum].name);
+    var preview = JSON.stringify((data).tracks.items[randomNum].preview_url);
+    var album = JSON.stringify((data).tracks.items[randomNum].album.name);
+
+    console.log("\n");
+    console.log("Artist: " + artist + "\n" + "Song: "+ song + "\n" + "Preview: " +preview +"\n"+ "Album: "+album);
+    console.log("\n");
+    
+//Just for my use, to parse JSON for my sanity......
+    // fs.writeFile('spotify_json.json', JSON.stringify((data).tracks.items[0].album.name), (err) => {
+    //     if (err) throw err;
+    //     console.log('The "data to append" was appended to file!');
+    // });
 
 });
 break;
