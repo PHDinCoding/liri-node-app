@@ -141,7 +141,7 @@ var omdbFunction = function(){
     
     var actors = JSON.parse(body).Actors;
     
-    var ratingsFromRotten = JSON.parse(body).Ratings[1].Source +": "+JSON.parse(body).Ratings[1].Value;
+    var ratingsFromRotten = JSON.parse(body).Ratings[1].Source +":        "+JSON.parse(body).Ratings[1].Value;
     
     console.log("\n");
     console.log("Title:                  "+title+"\n");
