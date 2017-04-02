@@ -1,0 +1,25 @@
+{
+  "name": "liri-node-app",
+  "version": "1.0.0",
+  "description": "A simple CLI for finding your tweets, movies, and songs",
+  "main": "liri.js",
+  "dependencies": {
+    "omdb": "^0.7.0",
+    "spotify": "^0.3.0",
+    "twitter": "^1.7.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node liri.js movie-this \"Forrest Gump\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PHDinCoding/liri-node-app.git"
+  },
+  "author": "Aashish Panvelkar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PHDinCoding/liri-node-app/issues"
+  },
+  "homepage": "https://github.com/PHDinCoding/liri-node-app#readme"
+}

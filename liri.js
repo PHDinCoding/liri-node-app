@@ -310,7 +310,8 @@ case "do-what-it-says":
     break;
 }
 
-default:{
+default:
+{
     console.log("\n");
     console.log("Please check your command, you might have misspelled something?");
     console.log("\n");
